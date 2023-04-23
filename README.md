@@ -18,7 +18,9 @@ npm run cy:test
 npx cypress open
 ```
 
-I also created an actions file that will kick off the test in a github actions runner when a push is made to the repo
+I also created an actions file that will kick off the test in a github actions runner when a push is made to the repo.
+
+If test fails, then a video playback of the test is stored as part of the build.
 
 ###  NOTES
 The test fails at the point when I assert that there should be 9 items displayed in the shopping basket list (I add 3 * 3 items over the course of the test).
