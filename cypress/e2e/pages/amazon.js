@@ -20,11 +20,7 @@ function addProductsToBasket (productsCategories, numberOfItemsToAdd) {
     productsCategories.forEach((searchString) => {
         let itemsOfType = 0
 
-        cy.get(amazon.searchBox).clear().type(searchString).then(() => {
-            cy.get(amazon.submitSearchButton).click()
-            cy.get(amazon.searchResults).should('be.visible')
-            cy.get(amazon.searchResults).should('have.length.at.least', 8)
-        })
+        categorySearch(searchString)
 
         cy.get(amazon.searchResults).each((searchResult, index) =>{
             if (searchResult.find(amazon.primeLogo).is(':visible')) {
@@ -53,6 +49,14 @@ function addProductsToBasket (productsCategories, numberOfItemsToAdd) {
                 if ( Number(itemsOfType) === Number(numberOfItemsToAdd) ) { return false }
             }
         })
+    })
+}
+
+function categorySearch (searchString) {
+    cy.get(amazon.searchBox).clear().type(searchString).then(() => {
+        cy.get(amazon.submitSearchButton).click( {force: true} )
+        cy.get(amazon.searchResults).should('be.visible')
+        cy.get(amazon.searchResults).should('have.length.at.least', 8)
     })
 }
 

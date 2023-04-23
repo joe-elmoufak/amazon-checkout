@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://www.amazon.co.uk',
-    defaultCommandTimeout: 30000,
-    pageLoadTimeout: 30000
+    defaultCommandTimeout: 10000,
+    pageLoadTimeout: 10000
   },
 });
