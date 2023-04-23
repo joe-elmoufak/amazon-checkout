@@ -14,3 +14,11 @@ jobs:
         with:
           browser: chrome
           command: npm run cy:test
+
+      - name: Save video of test run
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: |
+            cypress/videos
