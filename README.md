@@ -15,5 +15,5 @@ npm run cy:test
 ### To run test in the cypress application
 
 ```
-npm cypress open
+npx cypress open
 ```
