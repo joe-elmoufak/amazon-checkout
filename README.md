@@ -17,3 +17,5 @@ npm run cy:test
 ```
 npx cypress open
 ```
+
+I also created an actions file that will kick off the test in a github actions runner when a push is made to the repo
