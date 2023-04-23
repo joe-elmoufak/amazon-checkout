@@ -28,3 +28,5 @@ The test fails at the point when I assert that there should be 9 items displayed
 While the number of items is correctly displayed as 9, there only appear to be 8 items in the shopping basket.
 
 If I ignore this assetion, then the test will go on to remove the first item and then assert that the number has reduced from 9 to 8 (items in the basket)
+
+Interestingly, when the tests are run in the github runner, the Prime logo on the each search result item is missing so no items are ever added to the basket. This is not the case when the tests are run locally so would need more time to investigate why this is.
