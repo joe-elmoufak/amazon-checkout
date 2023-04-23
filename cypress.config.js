@@ -7,6 +7,6 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://www.amazon.co.uk',
     defaultCommandTimeout: 30000,
-    pageLoadTimeout: 60000
+    pageLoadTimeout: 30000
   },
 });
