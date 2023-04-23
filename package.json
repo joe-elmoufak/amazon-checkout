@@ -2,7 +2,7 @@
   "name": "Amazon Test",
 
   "scripts": {
-    "cy:test": "cypress run --browser chrome"
+    "cy:test": "cypress run --browser chrome --headed"
   },
 
   "devDependencies": {
