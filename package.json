@@ -1,0 +1,11 @@
+{
+  "name": "Amazon Test",
+
+  "scripts": {
+    "cy:test": "cypress run --browser chrome"
+  },
+
+  "devDependencies": {
+    "cypress": "^12.10.0"
+  }
+}
